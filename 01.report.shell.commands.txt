@@ -1,0 +1,88 @@
+$ echo hello world
+hello world
+
+$ passwd
+Changing password for home.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+$ date
+Thứ tư, 03 Tháng tư năm 2019 10:44 +07
+
+$ hostname
+SVT13115FGS
+
+$ arch 
+x86_64
+
+$ uname -a
+Linux SVT13115FGS 4.15.0-45-generic #48~16.04.1-Ubuntu SMP Tue Jan 29 9:48 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+$ dmesg
+[    8.830837] snd_hda_intel 0000:00:1b.0: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[    8.853837] snd_hda_codec_realtek hdaudioC0D0: autoconfig for ALC269VC: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker
+[    8.853843] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[    8.853847] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[    8.853850] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0
+[    8.853852] snd_hda_codec_realtek hdaudioC0D0:    inputs:
+[    8.853856] snd_hda_codec_realtek hdaudioC0D0:      Mic=0x12
+[    8.868686] input: HDA Intel PCH Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
+[    8.868794] input: HDA Intel PCH HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input12
+[ 1645.537249] wlp3s0: authenticate with c0:4a:00:77:c9:d4
+[ 1645.557901] wlp3s0: send auth to c0:4a:00:77:c9:d4 (try 1/3)
+[ 1645.561156] wlp3s0: authenticated
+[ 1645.572057] wlp3s0: associate with c0:4a:00:77:c9:d4 (try 1/3)
+[ 1645.576556] wlp3s0: RX AssocResp from c0:4a:00:77:c9:d4 (capab=0x431 status=0 aid=2)
+[ 1645.576690] wlp3s0: associated
+[ 1648.598478] wlp3s0: deauthenticated from c0:4a:00:77:c9:d4 (Reason: 6=CLASS2_FRAME_FROM_NONAUTH_STA)
+[ 1661.123866] wlp3s0: authenticate with c0:4a:00:77:c9:d4
+[ 1661.142047] wlp3s0: send auth to c0:4a:00:77:c9:d4 (try 1/3)
+[ 1661.165712] wlp3s0: authenticated
+[ 1661.168058] wlp3s0: associate with c0:4a:00:77:c9:d4 (try 1/3)
+[ 1661.209247] wlp3s0: RX AssocResp from c0:4a:00:77:c9:d4 (capab=0x431 status=0 aid=2)
+[ 1661.209379] wlp3s0: associated
+[ 1664.222221] wlp3s0: deauthenticated from c0:4a:00:77:c9:d4 (Reason: 6=CLASS2_FRAME_FROM_NONAUTH_STA)
+[ 1677.145955] wlp3s0: authenticate with c0:4a:00:77:c9:d4
+[ 1677.165916] wlp3s0: send auth to c0:4a:00:77:c9:d4 (try 1/3)
+[ 1677.168246] wlp3s0: authenticated
+[ 1677.172138] wlp3s0: associate with c0:4a:00:77:c9:d4 (try 1/3)
+[ 1677.187251] wlp3s0: RX AssocResp from c0:4a:00:77:c9:d4 (capab=0x431 status=0 aid=2)
+[ 1677.187377] wlp3s0: associated
+[ 1677.213581] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+
+
+$ uptime
+ 11:03:33 up 74 min,  1 user,  load average: 0,53, 0,61, 0,52
+
+$ who am i
+
+$ whoami
+home
+
+$ who
+home tty7         2019-04-03 14:32 (:0)
+
+$ id
+uid=1000(home) gid=1000(home) groups=1000(home),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+
+$ last
+home     tty7         :0               Wed Apr  3 22:42    gone - no logout
+reboot   system boot  4.15.0-45-generi Wed Apr  3 22:15   still running
+home     tty7         :0               Thu Apr  4 00:23 - down   (-6:-56)
+reboot   system boot  4.15.0-45-generi Thu Apr  4 00:23 - 17:26  (-6:-56)
+home     tty7         :0               Wed Apr  3 23:34 - down   (00:01)
+reboot   system boot  4.15.0-45-generi Wed Apr  3 23:28 - 23:36  (00:07)
+
+wtmp begins Wed Apr  3 23:28:28 2019
+
+$ finger
+The program 'finger' is currently not installed. You can install it by typing:
+sudo apt install finger
+
+$ w
+ 18:14 up  1:00,  1 user,  load average: 0,48, 0,59, 0,54
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+home     tty7     :0               17:42    1:00m  1:36   0.26s /sbin/upstart -
+
