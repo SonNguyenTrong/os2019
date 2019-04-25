@@ -1,0 +1,25 @@
+$ ps man
+  PID TTY      STAT   TIME COMMAND
+  945 tty7     -      2:37 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+    - -        Ssl+   2:25 -
+    - -        Ssl+   0:12 -
+ 1271 tty1     -      0:00 /sbin/agetty --noclear tty1 linux
+    - -        Ss+    0:00 -
+ 4128 pts/4    -      0:02 bash
+    - -        Ss     0:02 -
+10558 pts/4    -      0:00 git-credential-cache--daemon /home/home/.git-credential-cache/socket
+    - -        S      0:00 -
+
+$ gnome-calculator
+
+$ ps aux | grep gnome-calculator | head -n 1
+home     12143  0.0  0.8 647360 34708 pts/4    Sl+  09:48   0:00 gnome-calculator
+
+$ cat /proc/12143/status | grep 'State'
+State:	S (sleeping)
+
+$ kill -stop 12143
+
+$ kill -cont 12143
+
+$ kill -kill 12143
