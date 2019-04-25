@@ -1,0 +1,19 @@
+$ grep systemd /proc/sched_debug
+ Ssystemd-timesyn   353         4.427664       120   120         0.000000        32.784038   0.000000 0 0 /system.slice/systemd-timesyncd.service
+ S     sd-resolve   367         1.133101        17   120         0.000000        5.860795    0.000000 0 0 /system.slice/systemd-timesyncd.service
+ S        systemd  1791    358591.995742       105   120         0.000000       121.975540   0.000000 0 0 /user.slice
+ S        systemd     1       560.350561      2042   120         0.000000      2511.209574   0.000000 0 0 /init.scope
+ S  systemd-udevd   288      2687.548306      4006   120         0.000000      1430.871317   0.000000 0 0 /system.slice/systemd-udevd.service
+ S systemd-logind   769        22.682336       838   120         0.000000       107.035983   0.000000 0 0 /system.slice/systemd-logind.service
+ Ssystemd-journal   265       207.271154      1851   120         0.000000       793.239107   0.000000 0 0 /system.slice/systemd-journald.service
+
+$ grep switch /proc/769/sched
+nr_switches                                  :                  838
+nr_voluntary_switches                        :                  780
+nr_involuntary_switches                      :                   58
+
+$ grep switch /proc/288/sched
+nr_switches                                  :                 4006
+nr_voluntary_switches                        :                 2797
+nr_involuntary_switches                      :                 1209
+
