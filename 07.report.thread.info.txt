@@ -1,0 +1,11 @@
+$ ps aux |grep chrome
+home      2886 59.7  7.3 1839244 289720 ?      Sl   09:40   0:10 /usr/lib/firefox/firefox
+home      2993 19.5  3.5 1571852 138204 ?      Sl   09:40   0:02 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 173739 -parentBuildID 20190410113011 -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 2886 true tab
+
+$ ps -o nlwp 2886
+NLWP
+  62
+
+
+$ ls /proc/2886/task | wc -l
+62	
